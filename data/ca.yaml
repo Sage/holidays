@@ -29,6 +29,15 @@ months:
     regions: [ca_mb]
     wday: 1
     week: 3
+  - name: Nova Scotia Heritage Day
+    regions: [ca_ns]
+    effective: 2015
+    wday: 1
+    week: 3
+  - name: Islander Day
+    regions: [ca_pe]
+    wday: 1
+    week: 3
   - name: BC Family Day
     regions: [ca_bc]
     wday: 1
@@ -88,7 +97,11 @@ months:
     wday: 1
   - name: Civic Holiday
     week: 1
-    regions: [ca_on]
+    regions: [ca_on, ca_nt, ca_nu]
+    wday: 1
+  - name: New Brunswick Day
+    week: 1
+    regions: [ca_nb]
     wday: 1
   - name: Discovery Day
     week: 3

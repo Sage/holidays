@@ -139,6 +139,7 @@ module Holidays
 
           # Skip informal holidays unless they have been requested
           next if h[:type] == :informal and not informal
+          next if h[:effective] && year < h[:effective]
 
           if h[:function]
             # Holiday definition requires a calculation

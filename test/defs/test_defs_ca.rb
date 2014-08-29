@@ -22,8 +22,31 @@ class CaDefinitionTests < Test::Unit::TestCase  # :nodoc:
 end
 
 # Family Day in BC
+[ Date.civil(2011,2,13), Date.civil(2012,2,12) ].each do |date|
+  assert_equal 0, Holidays.on(date, :ca_bc).length
+end
+
 [ Date.civil(2013,2,11), Date.civil(2014,2,10) ].each do |date|
   assert_equal 'BC Family Day', Holidays.on(date, :ca_bc)[0][:name]
+end
+
+# Nova Scotia Heritage Day in Nova Scotia
+[ Date.civil(2013,2,18), Date.civil(2014,2,17) ].each do |date|
+  assert_equal 0, Holidays.on(date, :ca_ns).length
+end
+
+[ Date.civil(2015,2,16), Date.civil(2016,2,15) ].each do |date|
+  assert_equal 'Nova Scotia Heritage Day', Holidays.on(date, :ca_ns)[0][:name]
+end
+
+# New Brunswick Day in New Brunswick
+[ Date.civil(2013,8,5), Date.civil(2014,8,4), Date.civil(2015,8,3) ].each do |date|
+  assert_equal 'New Brunswick Day', Holidays.on(date, :ca_nb)[0][:name]
+end
+
+# Islander Day in Prince Edward Island
+[ Date.civil(2013,2,18), Date.civil(2014,2,17), Date.civil(2015,2,16) ].each do |date|
+  assert_equal 'Islander Day', Holidays.on(date, :ca_pe)[0][:name]
 end
 
 # Victoria Day
