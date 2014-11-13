@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'holidays/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'holidays'
+  gem.name          = 'sage-holidays'
   gem.version       = Holidays::VERSION
   gem.authors       = ['Alex Dunae']
   gem.email         = ['code@dunae.ca']
